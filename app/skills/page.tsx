@@ -3,6 +3,7 @@ import Callout from "../_components/Callout";
 import CaptureSlot from "../_components/CaptureSlot";
 import SkillDiagram from "../_components/mockups/SkillDiagram";
 import Code from "../_components/Code";
+import Workshop, { Step } from "../_components/Workshop";
 
 export const metadata = {
   title: "5장. 스킬 만들기 — 클로드 가이드북",
@@ -270,6 +271,75 @@ claude`}</Code>
         <strong>손에 들고</strong> 글을 다듬는 식이에요. 친구가 책을 보면서
         일하는 느낌입니다.
       </p>
+
+      <Workshop
+        title="‘주간 일기 형식’ 스킬 5분 만에 만들기"
+        duration="약 5분"
+        difficulty="쉬움"
+      >
+        <Step n={1} title="어떤 책으로 만들지 정해요">
+          <p>
+            매주 일요일 저녁, 한 주를 돌아볼 때 펼쳐 볼 책이에요. 매번 같은
+            모양으로 정리해 두면 한 달 뒤 비교가 쉬워져요.
+          </p>
+        </Step>
+
+        <Step n={2} title="클로드한테 책 만들어 달라고 부탁">
+          <p>
+            클로드 코드에 들어가서, 아래 부탁을 그대로 붙여 넣어요.
+          </p>
+          <Code>{`이 폴더에 ".claude/skills/weekly-journal/SKILL.md" 스킬을 만들어 줘.
+
+표지(frontmatter)에 이렇게 적어 줘.
+- name: weekly-journal
+- description: 한 주를 돌아보고 일기로 정리할 때 펼치는 책. 사용자가 "이번 주 정리해 줘", "주간 회고", "한 주 일기" 같은 말을 하면 사용한다.
+
+본문에는 다음 순서로 일하라고 적어 줘.
+1) 받는 메모를 한 번 훑고, 한 주의 분위기를 한 줄로 적는다 (예: "잔잔했지만 단단했던 한 주")
+2) 다음 세 묶음으로 정리한다
+   - 배운 것 3개 (구체적인 사실 위주)
+   - 잘한 일 3개 (작아도 좋아)
+   - 다음 주에 바꿀 것 1개 (작고 실행 가능한 것)
+3) 마지막에 '나에게 한 줄' — 다음 주 나에게 보내는 짧은 응원
+
+말투는 차분하고, 평가하지 않는 톤으로.`}</Code>
+        </Step>
+
+        <Step n={3} title="한 번 펼쳐 보기">
+          <p>새 대화에서 한 주의 메모를 던져 봐요.</p>
+          <Code>{`이번 주 회고 좀 정리해 줘.
+
+— 메모 —
+- 월: 새 프로젝트 킥오프, 분위기 좋았음
+- 화·수: 마감 자료 만드느라 야근 두 번
+- 목: 상사 1on1, 피드백 두 가지 받음 (1) 메일 톤 더 단정하게 (2) 회의 시간 줄이기
+- 금: 동료랑 점심, 진짜 오랜만이라 좋았음
+- 토: 거의 잠만 잤음
+- 일: 운동 한 번, 책 50p`}</Code>
+        </Step>
+
+        <Step n={4} title="잘 펼쳐졌다면">
+          <p>
+            클로드가 <strong>weekly-journal</strong> 스킬을 알아서 펴고,
+            우리가 정해 둔 형식(분위기 한 줄 → 배운 것·잘한 일·바꿀 것 → 나에게
+            한 줄)대로 정리해 줄 거예요. 매주 같은 부탁만 던져도 항상 같은
+            모양으로 와요.
+          </p>
+        </Step>
+
+        <Callout tone="tip" title="이렇게도 키워 보세요">
+          <ul className="mt-1 list-disc pl-5 space-y-1">
+            <li>
+              같은 폴더에 <code>examples.md</code>를 두고 좋아하는 일기 톤의
+              예시 한두 편을 적어 두면, 톤이 더 또렷해져요.
+            </li>
+            <li>
+              매주 결과를 <code>journal/2026-W19.md</code> 식으로 저장하게
+              하면 한 달 뒤 ‘배운 것’만 모아 보기도 쉬워요.
+            </li>
+          </ul>
+        </Callout>
+      </Workshop>
 
       <h2>흔한 실수 네 가지</h2>
       <ol>
