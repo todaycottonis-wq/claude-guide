@@ -94,7 +94,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-20 sm:pt-32 pb-20 sm:pb-28">
           <div className="flex items-center gap-3 text-[11px] font-medium tracking-[0.22em] uppercase text-subtle">
             <span className="block h-1 w-1 rounded-full bg-foreground" />
-            Korean Edition · Vol. 1
+            AX Education
           </div>
           <h1 className="mt-7 text-[44px] sm:text-[88px] font-bold tracking-[-0.045em] leading-[1.0]">
             클로드,
@@ -102,9 +102,10 @@ export default function Home() {
             오늘부터.
           </h1>
           <p className="mt-9 max-w-xl text-[17px] sm:text-xl text-muted leading-[1.7]">
-            처음 클로드를 켜는 사람을 위한 한국어 입문서. 잘 부탁하는 법,
-            클로드 코드 사용법, 그리고 나만의 에이전트와 스킬을 만드는
-            방법까지 — 비유와 그림으로 한 권에 담았습니다.
+            처음 클로드를 켜는 사람을 위한 한국어 입문서.
+            <br />
+            잘 부탁하는 법, 클로드 코드, 나만의 에이전트와 스킬까지 — 비유와
+            그림으로 한 권에 담았습니다.
           </p>
           <div className="mt-12 flex items-center gap-6">
             <Link
