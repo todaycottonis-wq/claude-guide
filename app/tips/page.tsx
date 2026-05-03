@@ -145,6 +145,7 @@ export default function Page() {
         </>
       }
       prev={{ href: "/skills", label: "5장. 스킬 만들기" }}
+      next={{ href: "/companions", label: "7장. 함께 쓰는 친구들" }}
     >
       {sections.map((s, idx) => (
         <section key={s.title} className="not-prose mt-10 first:mt-0">

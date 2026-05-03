@@ -7,8 +7,8 @@ const styles: Record<
   { dot: string; label: string; tag: string }
 > = {
   tip: {
-    dot: "bg-foreground",
-    label: "text-foreground",
+    dot: "bg-accent",
+    label: "text-accent",
     tag: "TIP",
   },
   warn: {

@@ -7,6 +7,7 @@ const chapters = [
   { href: "/agents", label: "에이전트" },
   { href: "/skills", label: "스킬" },
   { href: "/tips", label: "팁" },
+  { href: "/companions", label: "친구들" },
 ];
 
 export default function Nav() {

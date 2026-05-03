@@ -23,8 +23,8 @@ export default function PageShell({
       {/* header band */}
       <div className="border-b border-border">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-12">
-          <div className="flex items-center gap-3 text-xs font-medium tracking-[0.18em] uppercase text-subtle">
-            <span className="block h-1 w-1 rounded-full bg-foreground" />
+          <div className="flex items-center gap-3 text-xs font-medium tracking-[0.18em] uppercase text-accent">
+            <span className="block h-1 w-1 rounded-full bg-accent" />
             Chapter {chapter.replace(/[^0-9]/g, "")}
           </div>
           <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-[-0.035em] leading-[1.08]">

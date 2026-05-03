@@ -49,6 +49,14 @@ const chapters = [
       "안전, 속도, 결과의 품질. 매일 쓰면서 쌓은 작은 습관들.",
     tag: "심화",
   },
+  {
+    href: "/companions",
+    n: "07",
+    title: "함께 쓰는 친구들",
+    blurb:
+      "Git · GitHub · Vercel · Supabase. 클로드와 가장 자주 짝을 이루는 도구들.",
+    tag: "생태계",
+  },
 ];
 
 const capabilities = [
@@ -93,7 +101,7 @@ export default function Home() {
       <section className="border-b border-border">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-20 sm:pt-32 pb-20 sm:pb-28">
           <div className="flex items-center gap-3 text-[11px] font-medium tracking-[0.22em] uppercase text-subtle">
-            <span className="block h-1 w-1 rounded-full bg-foreground" />
+            <span className="block h-1 w-1 rounded-full bg-accent" />
             AX Education
           </div>
           <h1 className="mt-7 text-[44px] sm:text-[88px] font-bold tracking-[-0.045em] leading-[1.0]">
@@ -111,12 +119,12 @@ export default function Home() {
           <div className="mt-12 flex items-center gap-6">
             <Link
               href="/claude"
-              className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-full text-sm font-semibold hover:bg-stone-700 transition"
+              className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white px-6 py-3.5 rounded-full text-sm font-semibold transition-colors"
             >
               시작하기
               <span aria-hidden>→</span>
             </Link>
-            <span className="text-sm text-subtle">총 6장 · 약 30분</span>
+            <span className="text-sm text-subtle">총 7장 · 약 35분</span>
           </div>
         </div>
       </section>
@@ -125,7 +133,7 @@ export default function Home() {
       <section className="border-b border-border">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
           <div className="max-w-2xl">
-            <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-subtle">
+            <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-accent">
               What it&apos;s good at
             </p>
             <h2 className="mt-3 text-[32px] sm:text-5xl font-bold tracking-[-0.035em] leading-[1.1]">
@@ -218,7 +226,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20">
           <div className="grid md:grid-cols-3 gap-10 md:gap-16">
             <div>
-              <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-subtle">
+              <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-accent">
                 Audience
               </p>
               <p className="mt-3 text-base text-foreground leading-[1.75]">
@@ -228,7 +236,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-subtle">
+              <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-accent">
                 Approach
               </p>
               <p className="mt-3 text-base text-foreground leading-[1.75]">
@@ -238,7 +246,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-subtle">
+              <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-accent">
                 How to read
               </p>
               <p className="mt-3 text-base text-foreground leading-[1.75]">

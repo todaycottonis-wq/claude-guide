@@ -41,6 +41,9 @@ export default function Footer() {
             <Link href="/tips" className="hover:text-foreground">
               6. 팁
             </Link>
+            <Link href="/companions" className="hover:text-foreground">
+              7. 친구들
+            </Link>
           </nav>
         </div>
         <div className="flex items-center justify-between text-xs text-subtle border-t border-border pt-6">

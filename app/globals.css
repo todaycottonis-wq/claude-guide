@@ -10,7 +10,9 @@
   --subtle: #737373;
   --border: #ececec;
   --border-strong: #d4d4d4;
-  --accent: #0a0a0a;
+  --accent: #ea580c;
+  --accent-hover: #c2410c;
+  --accent-soft: #fff7ed;
   --code-bg: #0a0a0a;
   --code-fg: #fafafa;
 }
@@ -25,6 +27,8 @@
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
