@@ -3,6 +3,7 @@ import Callout from "../_components/Callout";
 import CaptureSlot from "../_components/CaptureSlot";
 import CompanionsFlow from "../_components/mockups/CompanionsFlow";
 import Code from "../_components/Code";
+import ToolLink from "../_components/ToolLink";
 
 export const metadata = {
   title: "7장. 함께 쓰는 친구들 — 클로드 가이드북",
@@ -45,6 +46,14 @@ export default function Page() {
       </CaptureSlot>
 
       <h2>① Git — 글·코드의 타임머신</h2>
+      <ToolLink
+        name="Git"
+        url="https://git-scm.com/downloads"
+        domain="git-scm.com"
+        blurb="공식 사이트에서 운영체제별 설치 파일을 받을 수 있어요. Mac은 보통 이미 깔려 있어요."
+        iconSlug="git"
+        iconColor="F05032"
+      />
       <p>
         <strong>Git</strong>은 ‘<strong>한 단계마다 도장을 찍어 두고
         언제든 그 시점으로 되돌아갈 수 있게 해 주는 도구</strong>’예요. 게임의
@@ -77,6 +86,14 @@ export default function Page() {
       </Callout>
 
       <h2>② GitHub — Git을 인터넷에 올려 둔 동네</h2>
+      <ToolLink
+        name="GitHub"
+        url="https://github.com/join"
+        domain="github.com"
+        blurb="이메일로 회원가입. 공개 저장소·기본 협업 기능은 무료예요."
+        iconSlug="github"
+        iconColor="181717"
+      />
       <p>
         Git은 내 컴퓨터에 있어요. 컴퓨터가 망가지면 같이 사라지죠. 그래서
         Git의 도장과 폴더를 <strong>인터넷에 안전하게 옮겨 두는 곳</strong>이
@@ -109,6 +126,14 @@ export default function Page() {
       </Callout>
 
       <h2>③ Vercel — 만든 사이트를 인터넷에 띄우는 임대인</h2>
+      <ToolLink
+        name="Vercel"
+        url="https://vercel.com/signup"
+        domain="vercel.com"
+        blurb="GitHub 계정으로 바로 로그인 → 저장소 Import → Deploy. 클릭 세 번이면 사이트가 떠요."
+        iconSlug="vercel"
+        iconColor="000000"
+      />
       <p>
         코드는 만들었는데, 친구가 인터넷 주소로 와서 볼 수는 없잖아요. 코드
         파일을 <strong>인터넷 주소(URL)로 띄워 주는 자리</strong>가{" "}
@@ -149,6 +174,14 @@ git push
 #    (사람이 손댈 일 없음)`}</Code>
 
       <h2>④ Supabase — 서버 없이 ‘앱’을 만들게 해 주는 도우미</h2>
+      <ToolLink
+        name="Supabase"
+        url="https://supabase.com/dashboard/sign-up"
+        domain="supabase.com"
+        blurb="GitHub 계정으로 가입. 무료 플랜으로 프로젝트 1개 바로 시작 — 데이터·로그인·파일 보관까지."
+        iconSlug="supabase"
+        iconColor="3FCF8E"
+      />
       <p>
         사이트가 단순한 글이라면 Vercel만으로 충분해요. 그런데 <strong>회원가입
         · 로그인 · 게시글 · 댓글 · 사진 업로드</strong>처럼 사람들의 데이터를
@@ -182,6 +215,12 @@ git push
       </Callout>
 
       <h2>(보너스) MCP — 클로드가 다른 도구와 이야기하는 표준</h2>
+      <ToolLink
+        name="Model Context Protocol"
+        url="https://modelcontextprotocol.io"
+        domain="modelcontextprotocol.io"
+        blurb="MCP 공식 사이트. ‘무엇이 가능한지’ 둘러볼 수 있어요. 직접 만들지 않아도 누가 만든 커넥터를 가져다 쓰는 식으로 시작해요."
+      />
       <p>
         <strong>MCP(Model Context Protocol)</strong>는 클로드가 외부 도구와
         주고받는 ‘<strong>공통의 언어 규칙</strong>’이에요. 이게 있으면
@@ -200,22 +239,51 @@ git push
       <h2>그래서, 어디서부터 시작하면 좋을까요?</h2>
       <ol>
         <li>
-          <strong>Git부터.</strong> 새 폴더에서 <code>git init</code> 한 번,
-          작업 끝날 때마다 커밋. 이 한 가지만 익숙해져도 작업이 두려움 없이
-          빨라져요.
+          <strong>Git부터.</strong> 아직 없다면{" "}
+          <a
+            href="https://git-scm.com/downloads"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            git-scm.com
+          </a>
+          에서 설치 → 새 폴더에서 <code>git init</code> 한 번, 작업 끝날 때마다
+          커밋. 이 한 가지만 익숙해져도 작업이 두려움 없이 빨라져요.
         </li>
         <li>
-          <strong>GitHub.</strong> 회원가입하고 첫 저장소 만들기. 클로드
-          코드한테 <em>“이 폴더를 GitHub에 올려 줘”</em>라고 부탁하면 차근차근
-          알려 줘요.
+          <strong>GitHub.</strong>{" "}
+          <a
+            href="https://github.com/join"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            github.com/join
+          </a>
+          에서 가입 → 첫 저장소 만들기. 클로드 코드한테{" "}
+          <em>“이 폴더를 GitHub에 올려 줘”</em>라고 부탁하면 차근차근 알려 줘요.
         </li>
         <li>
-          <strong>Vercel.</strong> GitHub 계정으로 로그인 → 만든 저장소를
-          ‘Import’ → Deploy. 정말 클릭 세 번이에요.
+          <strong>Vercel.</strong>{" "}
+          <a
+            href="https://vercel.com/new"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            vercel.com/new
+          </a>
+          에 가서 GitHub 계정으로 로그인 → 만든 저장소를 ‘Import’ → Deploy.
+          정말 클릭 세 번이에요.
         </li>
         <li>
-          <strong>Supabase는 나중에.</strong> 데이터가 필요한 일이 생기면
-          그때 가입하고 붙이면 됩니다. 미리 붙이지 않아도 돼요.
+          <strong>Supabase는 나중에.</strong> 데이터가 필요한 일이 생기면 그때{" "}
+          <a
+            href="https://supabase.com/dashboard/sign-up"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            supabase.com
+          </a>
+          에 가입하고 붙이면 됩니다. 미리 붙이지 않아도 돼요.
         </li>
       </ol>
 
