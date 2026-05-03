@@ -137,7 +137,13 @@ export default function Page() {
     <PageShell
       chapter="6장"
       title="더 잘 쓰는 팁 모음"
-      intro="끝까지 따라온 김에, 매일 쓰면서 배운 작은 습관들을 모아 두었어요. 외울 필요는 없고, 막힐 때마다 한 번씩 다시 와서 봐요."
+      intro={
+        <>
+          끝까지 따라온 김에, 매일 쓰면서 배운 작은 습관들을 모아 두었어요.
+          <br />
+          외울 필요는 없고, 막힐 때마다 한 번씩 다시 와서 봐요.
+        </>
+      }
       prev={{ href: "/skills", label: "5장. 스킬 만들기" }}
     >
       {sections.map((s, idx) => (

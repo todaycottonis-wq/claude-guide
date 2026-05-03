@@ -101,11 +101,12 @@ export default function Home() {
             <br />
             오늘부터.
           </h1>
-          <p className="mt-9 max-w-xl text-[17px] sm:text-xl text-muted leading-[1.7]">
+          <p className="mt-9 max-w-xl text-[17px] sm:text-xl text-muted leading-[1.75]">
             처음 클로드를 켜는 사람을 위한 한국어 입문서.
             <br />
-            잘 부탁하는 법, 클로드 코드, 나만의 에이전트와 스킬까지 — 비유와
-            그림으로 한 권에 담았습니다.
+            잘 부탁하는 법부터 에이전트·스킬까지,
+            <br />
+            비유와 그림으로 한 권에 담았어요.
           </p>
           <div className="mt-12 flex items-center gap-6">
             <Link
@@ -131,12 +132,15 @@ export default function Home() {
               클로드가 특히 빛나는 순간
             </h2>
             <p className="mt-5 text-[17px] text-muted leading-[1.75]">
-              같은 AI라도 모델마다 잘하는 영역이 다릅니다. 클로드는{" "}
-              <strong className="text-foreground">긴 글</strong>,{" "}
+              같은 AI라도 모델마다 잘하는 영역이 달라요.
+              <br />
+              클로드는{" "}
+              <strong className="text-foreground">긴 글</strong>과{" "}
               <strong className="text-foreground">차분한 글쓰기</strong>,{" "}
-              <strong className="text-foreground">신중한 추론</strong>, 그리고{" "}
-              <strong className="text-foreground">안전한 답</strong>에 특히
-              강합니다. 일터와 일상에서 가장 자주 쓰게 되는 여덟 자리예요.
+              <strong className="text-foreground">신중한 추론</strong>과{" "}
+              <strong className="text-foreground">안전한 답</strong>에 특히 강합니다.
+              <br />
+              일터와 일상에서 가장 자주 쓰게 되는 여덟 자리예요.
             </p>
           </div>
 

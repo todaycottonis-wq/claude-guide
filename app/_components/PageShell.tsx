@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 type Props = {
   chapter: string;
   title: string;
-  intro: string;
+  intro: ReactNode;
   prev?: { href: string; label: string };
   next?: { href: string; label: string };
   children: ReactNode;
