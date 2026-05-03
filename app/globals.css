@@ -1,39 +1,30 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @import "tailwindcss";
 
 :root {
-  --background: #fbfaf7;
+  --background: #ffffff;
+  --background-alt: #fafafa;
   --surface: #ffffff;
-  --foreground: #1c1917;
-  --muted: #57534e;
-  --subtle: #78716c;
-  --border: #e7e5e4;
-  --accent: #d97706;
-  --accent-soft: #fef3c7;
-  --sky: #0284c7;
-  --sky-soft: #e0f2fe;
-  --rose: #be185d;
-  --rose-soft: #ffe4e6;
-  --emerald: #047857;
-  --emerald-soft: #d1fae5;
-  --code-bg: #292524;
-  --code-fg: #fafaf9;
+  --foreground: #0a0a0a;
+  --muted: #525252;
+  --subtle: #737373;
+  --border: #ececec;
+  --border-strong: #d4d4d4;
+  --accent: #0a0a0a;
+  --code-bg: #0a0a0a;
+  --code-fg: #fafafa;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
   --color-surface: var(--surface);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-subtle: var(--subtle);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
-  --color-sky: var(--sky);
-  --color-sky-soft: var(--sky-soft);
-  --color-rose: var(--rose);
-  --color-rose-soft: var(--rose-soft);
-  --color-emerald: var(--emerald);
-  --color-emerald-soft: var(--emerald-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -45,22 +36,28 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), "Pretendard", -apple-system,
-    BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", system-ui,
-    sans-serif;
-  font-feature-settings: "ss01", "cv11";
+  font-family: "Pretendard Variable", Pretendard, var(--font-geist-sans),
+    -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic",
+    system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  letter-spacing: -0.005em;
+}
+
+::selection {
+  background: #0a0a0a;
+  color: #ffffff;
 }
 
 .prose-ko {
   line-height: 1.85;
   word-break: keep-all;
   overflow-wrap: anywhere;
+  letter-spacing: -0.011em;
 }
 
 .prose-ko p {
-  margin-block: 1rem;
+  margin-block: 1.1rem;
   font-size: 1.0625rem;
   color: var(--foreground);
 }
@@ -68,17 +65,18 @@ body {
 .prose-ko h2 {
   font-size: 1.625rem;
   font-weight: 700;
-  margin-top: 3.5rem;
+  margin-top: 4rem;
   margin-bottom: 1rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.028em;
   color: var(--foreground);
 }
 
 .prose-ko h3 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-top: 2.25rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.022em;
   color: var(--foreground);
 }
 
@@ -95,8 +93,12 @@ body {
 }
 
 .prose-ko li {
-  margin-block: 0.35rem;
+  margin-block: 0.4rem;
   font-size: 1.0625rem;
+}
+
+.prose-ko li::marker {
+  color: var(--subtle);
 }
 
 .prose-ko strong {
@@ -107,42 +109,42 @@ body {
 .prose-ko code {
   font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
     monospace;
-  font-size: 0.9em;
-  background: #f5f0e8;
+  font-size: 0.88em;
+  background: #f4f4f5;
   border: 1px solid var(--border);
-  padding: 0.1em 0.4em;
-  border-radius: 0.35em;
-  color: #78350f;
+  padding: 0.08em 0.4em;
+  border-radius: 0.25em;
+  color: #18181b;
 }
 
 .prose-ko a {
-  color: var(--sky);
+  color: var(--foreground);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
+  font-weight: 500;
 }
 
 .code-block {
   background: var(--code-bg);
   color: var(--code-fg);
-  padding: 1rem 1.25rem;
-  border-radius: 0.75rem;
+  padding: 1.1rem 1.3rem;
+  border-radius: 0.5rem;
   overflow-x: auto;
   font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
     monospace;
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-size: 0.88rem;
+  line-height: 1.65;
 }
 
-.code-block .c {
-  color: #a8a29e;
-}
-.code-block .k {
-  color: #fbbf24;
-}
-.code-block .s {
-  color: #86efac;
-}
-.code-block .p {
-  color: #fca5a5;
+.dotted-divider {
+  background-image: radial-gradient(
+    circle,
+    var(--border-strong) 1px,
+    transparent 1px
+  );
+  background-size: 8px 8px;
+  background-position: 0 50%;
+  background-repeat: repeat-x;
+  height: 8px;
 }

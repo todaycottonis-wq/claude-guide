@@ -1,41 +1,55 @@
 import Link from "next/link";
 
 const chapters = [
-  { href: "/claude", label: "1. 클로드란?" },
-  { href: "/prompting", label: "2. 잘 부탁하기" },
-  { href: "/claude-code", label: "3. 클로드 코드" },
-  { href: "/agents", label: "4. 에이전트" },
-  { href: "/skills", label: "5. 스킬" },
-  { href: "/tips", label: "6. 팁 모음" },
+  { href: "/claude", label: "클로드" },
+  { href: "/prompting", label: "잘 부탁하기" },
+  { href: "/claude-code", label: "클로드 코드" },
+  { href: "/agents", label: "에이전트" },
+  { href: "/skills", label: "스킬" },
+  { href: "/tips", label: "팁" },
 ];
 
 export default function Nav() {
   return (
     <header className="sticky top-0 z-30 backdrop-blur bg-background/85 border-b border-border">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center gap-6">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 h-14 flex items-center gap-8">
         <Link
           href="/"
-          className="flex items-center gap-2 font-semibold tracking-tight text-foreground"
+          className="flex items-center gap-2.5 font-bold tracking-tight text-foreground"
         >
           <span
             aria-hidden
-            className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-accent text-white text-sm font-bold"
-          >
-            C
-          </span>
-          <span className="hidden sm:inline">클로드 가이드북</span>
+            className="block h-2 w-2 rounded-full bg-foreground"
+          />
+          <span className="text-[15px]">Claude Guide</span>
         </Link>
-        <nav className="ml-auto flex flex-wrap gap-1 text-[13px] sm:text-sm">
+        <nav className="ml-auto hidden sm:flex items-center gap-1 text-[13.5px]">
           {chapters.map((c) => (
             <Link
               key={c.href}
               href={c.href}
-              className="px-2.5 py-1.5 rounded-md text-muted hover:text-foreground hover:bg-accent-soft/60 transition-colors"
+              className="px-3 py-1.5 text-muted hover:text-foreground transition-colors"
             >
               {c.label}
             </Link>
           ))}
         </nav>
+        <details className="ml-auto sm:hidden relative">
+          <summary className="list-none cursor-pointer text-sm text-muted px-2 py-1">
+            메뉴
+          </summary>
+          <div className="absolute right-0 top-full mt-2 w-44 rounded-lg border border-border bg-surface shadow-sm overflow-hidden">
+            {chapters.map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="block px-4 py-2.5 text-sm hover:bg-background-alt"
+              >
+                {c.label}
+              </Link>
+            ))}
+          </div>
+        </details>
       </div>
     </header>
   );

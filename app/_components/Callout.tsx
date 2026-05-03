@@ -2,36 +2,34 @@ import type { ReactNode } from "react";
 
 type Tone = "tip" | "warn" | "note" | "good" | "bad";
 
-const styles: Record<Tone, { bg: string; border: string; label: string; tag: string }> = {
+const styles: Record<
+  Tone,
+  { dot: string; label: string; tag: string }
+> = {
   tip: {
-    bg: "bg-accent-soft/60",
-    border: "border-amber-300",
-    label: "text-amber-700",
-    tag: "꿀팁",
+    dot: "bg-foreground",
+    label: "text-foreground",
+    tag: "TIP",
   },
   warn: {
-    bg: "bg-rose-soft/60",
-    border: "border-rose-300",
+    dot: "bg-rose-500",
     label: "text-rose-700",
-    tag: "조심!",
+    tag: "주의",
   },
   note: {
-    bg: "bg-sky-soft/60",
-    border: "border-sky-300",
-    label: "text-sky-700",
-    tag: "메모",
+    dot: "bg-stone-400",
+    label: "text-muted",
+    tag: "NOTE",
   },
   good: {
-    bg: "bg-emerald-soft/60",
-    border: "border-emerald-300",
+    dot: "bg-emerald-500",
     label: "text-emerald-700",
-    tag: "이렇게 좋아요",
+    tag: "GOOD",
   },
   bad: {
-    bg: "bg-rose-soft/60",
-    border: "border-rose-300",
+    dot: "bg-rose-500",
     label: "text-rose-700",
-    tag: "이러면 헷갈려요",
+    tag: "BAD",
   },
 };
 
@@ -46,13 +44,16 @@ export default function Callout({
 }) {
   const s = styles[tone];
   return (
-    <aside
-      className={`my-6 rounded-2xl border ${s.border} ${s.bg} px-5 py-4 not-prose`}
-    >
-      <p className={`text-xs font-bold uppercase tracking-wider ${s.label}`}>
-        {title ?? s.tag}
-      </p>
-      <div className="mt-1 text-[15px] leading-relaxed text-foreground">
+    <aside className="my-7 not-prose rounded-xl border border-border bg-background-alt px-5 py-4">
+      <div className="flex items-center gap-2">
+        <span className={`block h-1.5 w-1.5 rounded-full ${s.dot}`} />
+        <p
+          className={`text-[11px] font-bold tracking-[0.18em] uppercase ${s.label}`}
+        >
+          {title ?? s.tag}
+        </p>
+      </div>
+      <div className="mt-2 text-[15px] leading-[1.75] text-foreground">
         {children}
       </div>
     </aside>
